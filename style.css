@@ -5,12 +5,10 @@
   padding: 0;
 }
 
-/* Evita selección rara en móvil */
 body {
   font-family: Arial, sans-serif;
   background: linear-gradient(#fde2e4, #fff1f2);
   overflow: hidden;
-  -webkit-user-select: none;
   user-select: none;
 }
 
@@ -41,8 +39,6 @@ body {
   background: #ffb6c1;
   border-radius: 50%;
   position: absolute;
-  top: 100px;
-  left: 100px;
   box-shadow: 0 0 10px rgba(255, 182, 193, 0.7);
   transition: top 0.1s linear, left 0.1s linear;
 }
@@ -86,37 +82,6 @@ body {
   letter-spacing: 1px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   backdrop-filter: blur(6px);
-}
-
-/* ===== CONTROLES MÓVIL ===== */
-#mobile-controls {
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: none;
-  z-index: 999;
-}
-
-#mobile-controls button {
-  font-size: 24px;
-  padding: 10px 14px;
-  margin: 5px;
-  border-radius: 12px;
-  border: none;
-  background: #f4a7b9;
-  color: white;
-}
-
-/* Hover solo para PC */
-@media (hover: hover) {
-  #mobile-controls button:hover {
-    transform: scale(1.1);
-  }
-}
-
-.hidden {
-  display: none;
 }
 
 /* ===== FINAL ===== */
@@ -164,15 +129,7 @@ body {
   justify-content: center;
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  #finalContent {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-/* ===== SELECCIÓN DE DISPOSITIVO ===== */
+/* ===== SELECCIÓN DISPOSITIVO ===== */
 #deviceSelect {
   position: fixed;
   top: 0;
@@ -211,9 +168,10 @@ body {
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-/* Hover solo PC */
-@media (hover: hover) {
-  #deviceBox button:hover {
-    transform: scale(1.08);
-  }
+#deviceBox button:hover {
+  transform: scale(1.08);
+}
+
+.hidden {
+  display: none;
 }
